@@ -24,8 +24,9 @@ struct Hashtag_View: View {
             // Start of color circle, text
             HStack(){
                 Circle()
+                    .foregroundColor(Color.lightpink)
                     .frame(width: 24, height: 24)
-                
+                    
                 Text("work")
 
             }
