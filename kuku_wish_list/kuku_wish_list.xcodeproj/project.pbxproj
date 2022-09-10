@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48663A5428CD015B001EC0F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48663A5328CD015B001EC0F2 /* LoginView.swift */; };
 		AA099CA928CCCF810015AB45 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA099CA828CCCF810015AB45 /* WishList.swift */; };
 		AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */; };
-		AA896EC628CC8680004C7068 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA896EC528CC8680004C7068 /* ContentView.swift */; };
 		AA896EC828CC8680004C7068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA896EC728CC8680004C7068 /* Assets.xcassets */; };
 		AA896ECB28CC8680004C7068 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA896ECA28CC8680004C7068 /* Preview Assets.xcassets */; };
 		AA896ED528CC8680004C7068 /* kuku_wish_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA896ED428CC8680004C7068 /* kuku_wish_listTests.swift */; };
@@ -38,10 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48663A5328CD015B001EC0F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AA099CA828CCCF810015AB45 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
 		AA896EC028CC8680004C7068 /* kuku_wish_list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kuku_wish_list.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kuku_wish_listApp.swift; sourceTree = "<group>"; };
-		AA896EC528CC8680004C7068 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA896EC728CC8680004C7068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA896ECA28CC8680004C7068 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA896ED028CC8680004C7068 /* kuku_wish_listTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kuku_wish_listTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */,
-				AA896EC528CC8680004C7068 /* ContentView.swift */,
+				48663A5328CD015B001EC0F2 /* LoginView.swift */,
 				AA099CA828CCCF810015AB45 /* WishList.swift */,
 				AABC4E6F28CCE38D00E38EAC /* Wish.swift */,
 				AABC4E7128CCE43500E38EAC /* Hashtag.swift */,
@@ -269,9 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48663A5428CD015B001EC0F2 /* LoginView.swift in Sources */,
 				AABC4E7828CCFCC700E38EAC /* WishModel.swift in Sources */,
 				AABC4E7028CCE38D00E38EAC /* Wish.swift in Sources */,
-				AA896EC628CC8680004C7068 /* ContentView.swift in Sources */,
 				AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */,
 				AABC4E7228CCE43500E38EAC /* Hashtag.swift in Sources */,
 				AA099CA928CCCF810015AB45 /* WishList.swift in Sources */,
