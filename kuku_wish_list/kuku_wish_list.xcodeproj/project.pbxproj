@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48663A5428CD015B001EC0F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48663A5328CD015B001EC0F2 /* LoginView.swift */; };
+		48663A5628CD0B55001EC0F2 /* ColorExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */; };
 		AA099CA928CCCF810015AB45 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA099CA828CCCF810015AB45 /* WishList.swift */; };
 		AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */; };
 		AA896EC828CC8680004C7068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA896EC728CC8680004C7068 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		48663A5328CD015B001EC0F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtentsion.swift; sourceTree = "<group>"; };
 		AA099CA828CCCF810015AB45 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
 		AA896EC028CC8680004C7068 /* kuku_wish_list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kuku_wish_list.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kuku_wish_listApp.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				AABC4E6F28CCE38D00E38EAC /* Wish.swift */,
 				AABC4E7128CCE43500E38EAC /* Hashtag.swift */,
 				AABC4E7728CCFCC700E38EAC /* WishModel.swift */,
+				48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */,
 				AA896EC728CC8680004C7068 /* Assets.xcassets */,
 				AA896EC928CC8680004C7068 /* Preview Content */,
 			);
@@ -275,6 +278,7 @@
 				AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */,
 				AABC4E7228CCE43500E38EAC /* Hashtag.swift in Sources */,
 				AA099CA928CCCF810015AB45 /* WishList.swift in Sources */,
+				48663A5628CD0B55001EC0F2 /* ColorExtentsion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

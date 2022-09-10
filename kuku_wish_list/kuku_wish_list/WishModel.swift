@@ -21,4 +21,5 @@ struct WishModel{
     func printProperty(){
         print("title: \(title)\ntext: \(text)\neagerness: \(eagerness)")
     }
+
 }
