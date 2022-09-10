@@ -1,32 +1,26 @@
 //
-//  WishList.swift
+//  Wish.swift
 //  kuku_wish_list
 //
-//  Created by Andrew Wonwhoo NAH on 2022/09/10.
+//  Created by Andrew Wonwhoo NAH on 2022/09/11.
 //
-//  developed by Nexlice
+//  Developed by Nexlice
 
 import Foundation
 import SwiftUI
 
-func addNewWish() -> String{
-    let newText = "newnew"
-    return newText
-}
-
-struct Wish_List_View: View {
+struct Wish_View: View {
     var body: some View {
         ZStack(){
             VStack(){
                 
                 //Start of hashtags
                 HStack(){
-                    //TODO: 만약에 아무것도 없으면 아무것도 띄우지 않을 것.
+                    
                 }
                 
                 //Start of wishlists
                 VStack(){
-                    //TODO: 아무것도 없으면 아직 wish없다고 띄울 것.
                     
                 }
                 
@@ -51,7 +45,7 @@ struct Wish_List_View: View {
     }
 }
 
-struct Wish_List_Previews: PreviewProvider {
+struct Wish_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             Wish_List_View()
