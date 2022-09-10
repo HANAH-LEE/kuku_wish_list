@@ -11,36 +11,22 @@ import SwiftUI
 
 struct Wish_View: View {
     var body: some View {
-        ZStack(){
+        
+        HStack(){
+            
+            Spacer().frame(width:12)
+            
             VStack(){
                 
-                //Start of hashtags
-                HStack(){
-                    
-                }
+                Spacer().frame(height:15)
                 
-                //Start of wishlists
-                VStack(){
-                    
-                }
+                Text("")
                 
-                //Add new wish Button
-                Button(action:{
-                    
-                }){
-                    HStack(){
-                        Spacer()
-                        Image("icon_plus")
-                        
-                        Text("Add new wish")
-                            .foregroundColor(Color.black)
-                        Spacer().frame(width: 30)
-                        
-                    }
+                Spacer().frame(height:15)
                 }
+            
+            Spacer().frame(width:12)
                 
-                Spacer().frame(height: 10)
-            }
         }
     }
 }
@@ -48,7 +34,7 @@ struct Wish_View: View {
 struct Wish_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            Wish_List_View()
+            Wish_View()
         }
     }
 }
