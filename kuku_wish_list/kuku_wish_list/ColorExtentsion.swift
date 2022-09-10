@@ -13,9 +13,11 @@ import SwiftUI
 extension Color {
     
     static let lightpink = Color(hex: "F7D0CF")
+    static let lightgray = Color(hex: "EFEFEF")
+    static let midgrey = Color(hex: "CECECE")
     static let peach = Color(hex: "ff8882")
     static let ivory = Color(hex: "f8ede3")
-    static let brown = Color(hex: "897853")  // #을 제거하고 사용해도 됩니다.
+    // #을 제거하고 사용해도 됩니다.
 }
 
  

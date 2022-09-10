@@ -12,27 +12,21 @@ import SwiftUI
 
 struct Hashtag_View: View {
     var body: some View {
-        
-        // Start of hashtag
-        ZStack(){
-            Text("")
-                .frame(width: 84, height: 36)
-                .background(Color.gray)
-                .cornerRadius(18)
-//                .padding(5)
-            
+
             // Start of color circle, text
             HStack(){
+                Spacer().frame(width: 10)
                 Circle()
                     .foregroundColor(Color.lightpink)
                     .frame(width: 24, height: 24)
-                    
-                Text("work")
+                Spacer().frame(width: 5)
+                Text("work").fontWeight(.thin)
+                Spacer().frame(width: 10)
 
-            }
-            // End of color circle, text
-        }
-        // End of hashtag
+            }.frame(height: 36)
+                .background(Color.lightgray)
+                .cornerRadius(18)
+            // End of hashtag
     }
 }
 
