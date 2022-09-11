@@ -9,6 +9,9 @@
 import Foundation
 import SwiftUI
 
+
+var Wishes: [WishModel] = []
+
 func addNewWish() -> String{
     let newText = "newnew"
     return newText
