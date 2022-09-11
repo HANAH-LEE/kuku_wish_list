@@ -12,12 +12,17 @@ import SwiftUI
 //user's wish
 var Wishes: [WishModel] = []
 
+
 func addNewWish() -> String{
     let newText = "newnew"
     return newText
 }
 
 struct Wish_List_View: View {
+    
+    //hamberger icon
+    @State private var isHamburgerTapped = false
+    
     var body: some View {
         ZStack(){
             VStack(){
@@ -32,17 +37,21 @@ struct Wish_List_View: View {
                     Text("User"+"'s Wishlist")
                         .font(.system(size: 30, weight: .bold))
                     
-                    Spacer()
+                    //Spacer()
                     
                     Image("icon_search")
                         .resizable()
                         .frame(width: 40, height: 40)
+                        
                     
                     //Spacer().frame(width:16)
                     
                     Image("icon_hamburger")
                         .resizable()
                         .frame(width: 40, height: 40)
+                        .onTapGesture {
+                            isHamburgerTapped = true
+                        }
                     
                     Spacer().frame(width:30)
                 }
@@ -113,7 +122,7 @@ struct Wish_List_View: View {
                     
                 }){
                     HStack(){
-                        Spacer()
+                        //Spacer()
                         Image("icon_plus")
                             .resizable()
                             .frame(width: 30, height: 30)
@@ -126,6 +135,21 @@ struct Wish_List_View: View {
                     }
                 }
                 //Spacer().frame(height: 21)
+            }
+            .blur(radius: isHamburgerTapped ? 1.0 : 0)
+            
+            if isHamburgerTapped == true {
+                //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-visual-effect-blurs
+                //https://developer.apple.com/documentation/swiftui/view/blur(radius:opaque:)
+                RoundedRectangle(cornerRadius: 20)
+                    .opacity(0.5)
+                    .blur(radius: 1)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        isHamburgerTapped = false
+                    }
+                
+                    
             }
         }
         .navigationBarTitle("", displayMode: .inline)
