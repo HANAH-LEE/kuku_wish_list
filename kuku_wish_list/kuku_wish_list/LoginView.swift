@@ -38,6 +38,7 @@ struct Login_View: View {
                                     .cornerRadius(60)
                                     .padding(5)
                             }
+                            
                             NavigationLink(destination: Wish_List_View()){
                                 
                                 Text("GOOGLE")
@@ -64,6 +65,7 @@ struct Login_View: View {
                 }
             }
         }
+        
     }
 }
 

@@ -100,6 +100,9 @@ struct Wish_List_View: View {
                 //Spacer().frame(height: 21)
             }
         }
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
