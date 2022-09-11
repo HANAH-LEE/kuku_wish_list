@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-
+//user's wish
 var Wishes: [WishModel] = []
 
 func addNewWish() -> String{
@@ -47,41 +47,66 @@ struct Wish_List_View: View {
                     Spacer().frame(width:30)
                 }
                 //End of User name, search, and menu
-                ScrollView(){
-                    VStack(){
-                        
-                        //Start of hashtags
-                        HStack(spacing: 8){
-                            Spacer().frame(width: 21)
-                            //TODO: 만약에 아무것도 없으면 아무것도 띄우지 않을 것.
-                            //TODO: 정보 저장해서 Hashtag 불러올 것.
-                            Hashtag_View()
-                            Hashtag_View()
-                            Hashtag_View()
-                            Spacer()
-                            
-                        }
-                        //End of hashtags
-                        
-                        Spacer().frame(height: 15)
-                        
-                        //Start of wishlists
-                        VStack(alignment: .leading, spacing: 22){
-                            //TODO: 아무것도 없으면 아직 wish없다고 띄울 것.
-                            //TODO: 정보 저장해서 Wish 불러올 것.
-                            Wish_View()
-                            Wish_View()
-                            Wish_View()
-                            Wish_View()
-                            Wish_View()
-                            
-                            
-                        }
-                        //End of wishlists
-                        
-                        Spacer()
-                    }
+                
+                if Wishes.capacity == 0 {
                     
+                    Spacer().frame(height:100)
+                    
+                    Image("icon_nowish")
+                        .resizable()
+                        .frame(width:556, height:400)
+                    
+                    Text("no items yet")
+                        .foregroundColor(Color.black)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 40))
+                    
+                    Spacer().frame(height:21)
+                    
+                    Text("Get Started by clicking add new wish!")
+                        .foregroundColor(Color.black)
+                    
+                    Spacer()
+                    
+                }
+                else{
+                    
+                    ScrollView(){
+                        VStack(){
+                            
+                            //Start of hashtags
+                            HStack(spacing: 8){
+                                Spacer().frame(width: 21)
+                                //TODO: 만약에 아무것도 없으면 아무것도 띄우지 않을 것.
+                                //TODO: 정보 저장해서 Hashtag 불러올 것.
+                                Hashtag_View()
+                                Hashtag_View()
+                                Hashtag_View()
+                                Spacer()
+                                
+                            }
+                            //End of hashtags
+                            
+                            Spacer().frame(height: 15)
+                            
+                            //Start of wishlists
+                            VStack(alignment: .leading, spacing: 22){
+                                //TODO: 아무것도 없으면 아직 wish없다고 띄울 것.
+                                //TODO: 정보 저장해서 Wish 불러올 것.
+                                Wish_View()
+                                Wish_View()
+                                Wish_View()
+                                Wish_View()
+                                Wish_View()
+                                
+                                
+                            }
+                            //End of wishlists
+                            
+                            
+                        }
+                        
+                    }
                 }
                 //Add new wish Button
                 Button(action:{
