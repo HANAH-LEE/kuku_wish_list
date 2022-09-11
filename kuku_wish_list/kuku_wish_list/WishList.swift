@@ -18,34 +18,34 @@ struct Wish_List_View: View {
     var body: some View {
         ZStack(){
             VStack(){
+                Spacer().frame(height: 23)
+                
+                //Start of User name, search,and menu
+                HStack(){
+                    
+                    Spacer().frame(width:30)
+                    
+                    //TODO: 유저 이름 받아오기
+                    Text("User"+"'s Wishlist")
+                        .font(.system(size: 30, weight: .bold))
+                    
+                    Spacer()
+                    
+                    Image("icon_search")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                    
+                    //Spacer().frame(width:16)
+                    
+                    Image("icon_hamburger")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                    
+                    Spacer().frame(width:30)
+                }
+                //End of User name, search, and menu
                 ScrollView(){
                     VStack(){
-                        Spacer().frame(height: 23)
-                        
-                        //Start of User name, search,and menu
-                        HStack(){
-                            
-                            Spacer().frame(width:30)
-                            
-                            //TODO: 유저 이름 받아오기
-                            Text("User"+"'s Wishlist")
-                                .font(.system(size: 30, weight: .bold))
-                            
-                            Spacer()
-                            
-                            Image("icon_search")
-                                .resizable()
-                                .frame(width: 40, height: 40)
-                            
-                            //Spacer().frame(width:16)
-                            
-                            Image("icon_hamburger")
-                                .resizable()
-                                .frame(width: 40, height: 40)
-                            
-                            Spacer().frame(width:30)
-                        }
-                        //End of User name, search, and menu
                         
                         //Start of hashtags
                         HStack(spacing: 8){
