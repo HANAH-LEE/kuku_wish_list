@@ -19,6 +19,7 @@ struct Login_View: View {
                     Text("Hello,").font(.system(size: 40, weight: .heavy))
                     Spacer().frame(height: 48)
                     Text("The best way to achieve your goal.")
+                        .font(.custom("Montserrat-Black", size:20))
                     Text("Start accomplishingyour wishes")
                     Text("with KUKU. Let's get startd.")
                     Spacer().frame(height: 130)

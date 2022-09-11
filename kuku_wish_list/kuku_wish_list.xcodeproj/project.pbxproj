@@ -19,6 +19,9 @@
 		AABC4E7028CCE38D00E38EAC /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC4E6F28CCE38D00E38EAC /* Wish.swift */; };
 		AABC4E7228CCE43500E38EAC /* Hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC4E7128CCE43500E38EAC /* Hashtag.swift */; };
 		AABC4E7828CCFCC700E38EAC /* WishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC4E7728CCFCC700E38EAC /* WishModel.swift */; };
+		AABF8E1528CE0F3F00246694 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = AABF8E1428CE0F3F00246694 /* Montserrat */; };
+		AABF8E1628CE0F3F00246694 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = AABF8E1428CE0F3F00246694 /* Montserrat */; };
+		AABF8E1728CE0F3F00246694 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = AABF8E1428CE0F3F00246694 /* Montserrat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 		AABC4E6F28CCE38D00E38EAC /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
 		AABC4E7128CCE43500E38EAC /* Hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashtag.swift; sourceTree = "<group>"; };
 		AABC4E7728CCFCC700E38EAC /* WishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishModel.swift; sourceTree = "<group>"; };
+		AABF8E1328CE0CB000246694 /* kuku-wish-list-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "kuku-wish-list-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AABF8E1428CE0F3F00246694 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,8 @@
 		AA896EC228CC8680004C7068 /* kuku_wish_list */ = {
 			isa = PBXGroup;
 			children = (
+				AABF8E1428CE0F3F00246694 /* Montserrat */,
+				AABF8E1328CE0CB000246694 /* kuku-wish-list-Info.plist */,
 				AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */,
 				48663A5328CD015B001EC0F2 /* LoginView.swift */,
 				AA099CA828CCCF810015AB45 /* WishList.swift */,
@@ -248,6 +255,7 @@
 			files = (
 				AA896ECB28CC8680004C7068 /* Preview Assets.xcassets in Resources */,
 				AA896EC828CC8680004C7068 /* Assets.xcassets in Resources */,
+				AABF8E1528CE0F3F00246694 /* Montserrat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABF8E1628CE0F3F00246694 /* Montserrat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABF8E1728CE0F3F00246694 /* Montserrat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +450,7 @@
 				DEVELOPMENT_TEAM = YH8U2T42SA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "kuku-wish-list-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,6 +480,7 @@
 				DEVELOPMENT_TEAM = YH8U2T42SA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "kuku-wish-list-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

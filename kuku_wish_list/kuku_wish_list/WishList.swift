@@ -74,6 +74,7 @@ struct Wish_List_View: View {
                     
                     Text("Get Started by clicking add new wish!")
                         .foregroundColor(Color.black)
+                        
                     
                     Spacer()
                     
@@ -100,7 +101,6 @@ struct Wish_List_View: View {
                             
                             //Start of wishlists
                             VStack(alignment: .leading, spacing: 22){
-                                //TODO: 아무것도 없으면 아직 wish없다고 띄울 것.
                                 //TODO: 정보 저장해서 Wish 불러올 것.
                                 Wish_View()
                                 Wish_View()
@@ -157,7 +157,7 @@ struct Wish_List_View: View {
                     
             }
         }
-        .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        //.frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
