@@ -9,19 +9,22 @@
 import Foundation
 import SwiftUI
 
-//user's wish
-var Wishes: [WishModel] = []
 
 
-func addNewWish() -> String{
-    let newText = "newnew"
-    return newText
-}
 
 struct Wish_List_View: View {
     
+    //user's wish
+    @State var Wishes: [WishModel] = []
     //hamberger icon
     @State private var isHamburgerTapped = false
+    
+    func addNewWish() -> WishModel{
+        var new_wish = WishModel(_title: "wish practice", _text: "text practice", _eagerness: 5, _hashStr: "undefined", _hashColor: "red")
+        
+        Wishes.insert(new_wish, at: 0)
+        return new_wish
+    }
     
     var body: some View {
         ZStack(){
@@ -118,7 +121,7 @@ struct Wish_List_View: View {
                 }
                 //Add new wish Button
                 Button(action:{
-                    
+                    print(addNewWish())
                 }){
                     HStack(){
                         Spacer()
