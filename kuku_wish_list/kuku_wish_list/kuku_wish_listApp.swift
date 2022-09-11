@@ -11,7 +11,7 @@ import SwiftUI
 struct kuku_wish_listApp: App {
     var body: some Scene {
         WindowGroup {
-            Wish_List_View()
+            Login_View()
         }
     }
 }
