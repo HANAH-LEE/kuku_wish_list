@@ -26,7 +26,7 @@ struct Wish_List_View: View {
     var body: some View {
         ZStack(){
             VStack(){
-                Spacer().frame(height: 23)
+                Spacer().frame(height: 40)
                 
                 //Start of User name, search,and menu
                 HStack(){
@@ -37,14 +37,14 @@ struct Wish_List_View: View {
                     Text("User"+"'s Wishlist")
                         .font(.system(size: 30, weight: .bold))
                     
-                    //Spacer()
+                    Spacer()
                     
                     Image("icon_search")
                         .resizable()
                         .frame(width: 40, height: 40)
                         
                     
-                    //Spacer().frame(width:16)
+                    Spacer().frame(width:16)
                     
                     Image("icon_hamburger")
                         .resizable()
@@ -122,7 +122,7 @@ struct Wish_List_View: View {
                     
                 }){
                     HStack(){
-                        //Spacer()
+                        Spacer()
                         Image("icon_plus")
                             .resizable()
                             .frame(width: 30, height: 30)
@@ -134,24 +134,30 @@ struct Wish_List_View: View {
                         
                     }
                 }
-                //Spacer().frame(height: 21)
+                Spacer().frame(height: 21)
             }
+            .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+            //버그인듯? 프레임 크기 정해줘야 바운더리를 안넘어감..
             .blur(radius: isHamburgerTapped ? 1.0 : 0)
             
             if isHamburgerTapped == true {
                 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-visual-effect-blurs
                 //https://developer.apple.com/documentation/swiftui/view/blur(radius:opaque:)
-                RoundedRectangle(cornerRadius: 20)
-                    .opacity(0.5)
-                    .blur(radius: 1)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        isHamburgerTapped = false
-                    }
+                withAnimation(.easeInOut(duration: 2)){
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .opacity(0.5)
+                        .blur(radius: 1)
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            isHamburgerTapped = false
+                        }
+                }
                 
                     
             }
         }
+        .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
