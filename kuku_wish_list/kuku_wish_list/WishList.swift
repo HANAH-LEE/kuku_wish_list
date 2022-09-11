@@ -35,7 +35,7 @@ struct Wish_List_View: View {
                     
                     //TODO: 유저 이름 받아오기
                     Text("User"+"'s Wishlist")
-                        .font(.system(size: 30, weight: .bold))
+                        .font(.custom("Montserrat-Bold", size:25))
                     
                     Spacer()
                     
@@ -67,13 +67,12 @@ struct Wish_List_View: View {
                     
                     Text("no items yet")
                         .foregroundColor(Color.black)
-                        .fontWeight(.semibold)
-                        .font(.system(size: 40))
+                        .font(.custom("Montserrat-Medium", size:27))
                     
                     Spacer().frame(height:21)
                     
                     Text("Get Started by clicking add new wish!")
-                        .foregroundColor(Color.black)
+                        .font(.custom("Montserrat-Medium", size:16))
                         
                     
                     Spacer()
@@ -129,7 +128,7 @@ struct Wish_List_View: View {
                         
                         Text("Add new wish")
                             .foregroundColor(Color.black)
-                            .font(.system(size: 18))
+                            .font(.custom("Montserrat-Light", size:18))
                         Spacer().frame(width: 30)
                         
                     }
