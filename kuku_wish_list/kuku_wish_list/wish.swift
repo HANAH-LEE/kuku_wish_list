@@ -21,7 +21,7 @@ struct Wish_View: View {
                     
                     Spacer().frame(height:15)
                     
-                    HStack(){
+                    HStack(){  
                         //Title
                         Text("Title: Get Promoted")
                             .font(.system(size: 18, weight: .bold))
