@@ -53,7 +53,9 @@ struct Wish_List_View: View {
                         .resizable()
                         .frame(width: 40, height: 40)
                         .onTapGesture {
-                            isHamburgerTapped = true
+                            withAnimation(.spring().speed(0.5)){
+                                isHamburgerTapped = true
+                            }
                         }
                     
                     Spacer().frame(width:30)
@@ -89,11 +91,11 @@ struct Wish_List_View: View {
                             //Start of hashtags
                             HStack(spacing: 8){
                                 Spacer().frame(width: 21)
-                                //TODO: 만약에 아무것도 없으면 아무것도 띄우지 않을 것.
-                                //TODO: 정보 저장해서 Hashtag 불러올 것.
+                
                                 Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku1", _hashColor: "ff8882", _isSelected: false))
                                 Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku2", _hashColor: "ff8811", _isSelected: false))
                                 Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku3", _hashColor: "f28882", _isSelected: false))
+                                
                                 Spacer()
                                 
                             }
@@ -141,6 +143,8 @@ struct Wish_List_View: View {
             .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
             //버그인듯? 프레임 크기 정해줘야 바운더리를 안넘어감..
             .blur(radius: isHamburgerTapped ? 1.0 : 0)
+            
+            
             
             if isHamburgerTapped == true {
                 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-visual-effect-blurs
