@@ -91,9 +91,9 @@ struct Wish_List_View: View {
                                 Spacer().frame(width: 21)
                                 //TODO: 만약에 아무것도 없으면 아무것도 띄우지 않을 것.
                                 //TODO: 정보 저장해서 Hashtag 불러올 것.
-                                Hashtag_View()
-                                Hashtag_View()
-                                Hashtag_View()
+                                Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku1", _hashColor: "ff8882", _isSelected: false))
+                                Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku2", _hashColor: "ff8811", _isSelected: false))
+                                Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku3", _hashColor: "f28882", _isSelected: false))
                                 Spacer()
                                 
                             }

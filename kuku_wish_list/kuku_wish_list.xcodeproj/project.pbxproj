@@ -212,8 +212,8 @@
 				AABC4E6F28CCE38D00E38EAC /* Wish.swift */,
 				AABC4E7128CCE43500E38EAC /* Hashtag.swift */,
 				AABC4E7728CCFCC700E38EAC /* WishModel.swift */,
-				48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */,
 				AA9C1DE528CEF6D80018CA08 /* HashModel.swift */,
+				48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */,
 				AA896EC728CC8680004C7068 /* Assets.xcassets */,
 				AA896EC928CC8680004C7068 /* Preview Content */,
 			);
