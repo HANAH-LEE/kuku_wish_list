@@ -155,11 +155,12 @@ struct Wish_List_View: View {
 //                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 //                    .background(.ultraThinMaterial)
 //            }
-            
+            //****// 
             if isHamburgerTapped == true {
                 
                 //여기 지금 Zstack위임
                 //새로운 뷰 파일 만들도록 해요...
+                HamburgerView(isHamburgerTapped: $isHamburgerTapped)
 
             }
             

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48663A5428CD015B001EC0F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48663A5328CD015B001EC0F2 /* LoginView.swift */; };
 		48663A5628CD0B55001EC0F2 /* ColorExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */; };
+		48663A5828CF472E001EC0F2 /* HamburgerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48663A5728CF472E001EC0F2 /* HamburgerView.swift */; };
 		AA099CA928CCCF810015AB45 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA099CA828CCCF810015AB45 /* WishList.swift */; };
 		AA15377328CE13BF00EF51E5 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA15376128CE13BF00EF51E5 /* Montserrat-BoldItalic.ttf */; };
 		AA15377428CE13BF00EF51E5 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA15376128CE13BF00EF51E5 /* Montserrat-BoldItalic.ttf */; };
@@ -98,6 +99,7 @@
 /* Begin PBXFileReference section */
 		48663A5328CD015B001EC0F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtentsion.swift; sourceTree = "<group>"; };
+		48663A5728CF472E001EC0F2 /* HamburgerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerView.swift; sourceTree = "<group>"; };
 		AA099CA828CCCF810015AB45 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
 		AA15376128CE13BF00EF51E5 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		AA15376228CE13BF00EF51E5 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -216,12 +218,13 @@
 				AABC4E6F28CCE38D00E38EAC /* Wish.swift */,
 				AABC4E7128CCE43500E38EAC /* Hashtag.swift */,
 				AABC4E7728CCFCC700E38EAC /* WishModel.swift */,
+				48663A5728CF472E001EC0F2 /* HamburgerView.swift */,
 				AA9C1DE528CEF6D80018CA08 /* HashModel.swift */,
 				48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */,
-				AA896EC728CC8680004C7068 /* Assets.xcassets */,
-				AA896EC928CC8680004C7068 /* Preview Content */,
 				AA9C1DE928CF07120018CA08 /* ViewExtensions.swift */,
 				AA9C1DEB28CF173A0018CA08 /* AddNewWish.swift */,
+				AA896EC728CC8680004C7068 /* Assets.xcassets */,
+				AA896EC928CC8680004C7068 /* Preview Content */,
 			);
 			path = kuku_wish_list;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				AABC4E7028CCE38D00E38EAC /* Wish.swift in Sources */,
 				AA9C1DEC28CF173A0018CA08 /* AddNewWish.swift in Sources */,
 				AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */,
+				48663A5828CF472E001EC0F2 /* HamburgerView.swift in Sources */,
 				AA9C1DEA28CF07120018CA08 /* ViewExtensions.swift in Sources */,
 				AABC4E7228CCE43500E38EAC /* Hashtag.swift in Sources */,
 				AA099CA928CCCF810015AB45 /* WishList.swift in Sources */,
