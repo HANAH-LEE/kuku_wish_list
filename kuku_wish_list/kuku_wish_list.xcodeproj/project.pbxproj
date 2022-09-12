@@ -71,6 +71,7 @@
 		AA896EDF28CC8681004C7068 /* kuku_wish_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA896EDE28CC8681004C7068 /* kuku_wish_listUITests.swift */; };
 		AA896EE128CC8681004C7068 /* kuku_wish_listUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA896EE028CC8681004C7068 /* kuku_wish_listUITestsLaunchTests.swift */; };
 		AA9C1DE628CEF6D80018CA08 /* HashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C1DE528CEF6D80018CA08 /* HashModel.swift */; };
+		AA9C1DEA28CF07120018CA08 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C1DE928CF07120018CA08 /* ViewExtensions.swift */; };
 		AABC4E7028CCE38D00E38EAC /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC4E6F28CCE38D00E38EAC /* Wish.swift */; };
 		AABC4E7228CCE43500E38EAC /* Hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC4E7128CCE43500E38EAC /* Hashtag.swift */; };
 		AABC4E7828CCFCC700E38EAC /* WishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC4E7728CCFCC700E38EAC /* WishModel.swift */; };
@@ -125,6 +126,7 @@
 		AA896EDE28CC8681004C7068 /* kuku_wish_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kuku_wish_listUITests.swift; sourceTree = "<group>"; };
 		AA896EE028CC8681004C7068 /* kuku_wish_listUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kuku_wish_listUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AA9C1DE528CEF6D80018CA08 /* HashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashModel.swift; sourceTree = "<group>"; };
+		AA9C1DE928CF07120018CA08 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AABC4E6F28CCE38D00E38EAC /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
 		AABC4E7128CCE43500E38EAC /* Hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashtag.swift; sourceTree = "<group>"; };
 		AABC4E7728CCFCC700E38EAC /* WishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishModel.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */,
 				AA896EC728CC8680004C7068 /* Assets.xcassets */,
 				AA896EC928CC8680004C7068 /* Preview Content */,
+				AA9C1DE928CF07120018CA08 /* ViewExtensions.swift */,
 			);
 			path = kuku_wish_list;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				AABC4E7828CCFCC700E38EAC /* WishModel.swift in Sources */,
 				AABC4E7028CCE38D00E38EAC /* Wish.swift in Sources */,
 				AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */,
+				AA9C1DEA28CF07120018CA08 /* ViewExtensions.swift in Sources */,
 				AABC4E7228CCE43500E38EAC /* Hashtag.swift in Sources */,
 				AA099CA928CCCF810015AB45 /* WishList.swift in Sources */,
 				48663A5628CD0B55001EC0F2 /* ColorExtentsion.swift in Sources */,

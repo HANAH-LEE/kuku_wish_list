@@ -164,9 +164,21 @@ struct Wish_List_View: View {
                     }
                 
                 //Start of profile and settings
-                VStack(){
+                HStack(){
+                    VStack(){
+                        //https://iamcho2.github.io/2020/11/19/swiftui-round-specific-coners
+                        Rectangle()
+                            .cornerRadius(40, corners: .bottomLeft)
+                            .cornerRadius(40, corners: .topRight)
+                            .frame(width:250, height: 150)
+                        
+                    }
+                    Spacer().frame(width:40.5)
                     
                 }
+                //https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-asymmetric-transitions
+                .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
+                .ignoresSafeArea()
                 //End of profile and settings
             }
         }
