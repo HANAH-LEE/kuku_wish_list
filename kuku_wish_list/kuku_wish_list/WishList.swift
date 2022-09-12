@@ -127,7 +127,7 @@ struct Wish_List_View: View {
                 }
                 //Add new wish Button
                 Button(action:{
-                    print(addNewWish())
+                    //print(addNewWish())
                     isAddNewWishTapped.toggle()
                 }){
                     HStack(){

@@ -218,10 +218,10 @@
 				AABC4E7728CCFCC700E38EAC /* WishModel.swift */,
 				AA9C1DE528CEF6D80018CA08 /* HashModel.swift */,
 				48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */,
-				AA896EC728CC8680004C7068 /* Assets.xcassets */,
-				AA896EC928CC8680004C7068 /* Preview Content */,
 				AA9C1DE928CF07120018CA08 /* ViewExtensions.swift */,
 				AA9C1DEB28CF173A0018CA08 /* AddNewWish.swift */,
+				AA896EC728CC8680004C7068 /* Assets.xcassets */,
+				AA896EC928CC8680004C7068 /* Preview Content */,
 			);
 			path = kuku_wish_list;
 			sourceTree = "<group>";
