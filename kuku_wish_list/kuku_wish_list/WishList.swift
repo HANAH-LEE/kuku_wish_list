@@ -17,7 +17,9 @@ struct Wish_List_View: View {
     //user's wish
     @State var Wishes: [WishModel] = []
     //hamberger icon
-    @State private var isHamburgerTapped = false
+    @State var isHamburgerTapped = false
+    //add new wish
+    @State  var isAddNewWishTapped = false
     
     func addNewWish() -> WishModel{
         var new_wish = WishModel(_title: "wish practice", _text: "text practice", _eagerness: 5, _hashStr: "undefined", _hashColor: "red")
@@ -126,6 +128,7 @@ struct Wish_List_View: View {
                 //Add new wish Button
                 Button(action:{
                     print(addNewWish())
+                    isAddNewWishTapped.toggle()
                 }){
                     HStack(){
                         Spacer()
@@ -144,42 +147,28 @@ struct Wish_List_View: View {
             }
             .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
             //버그인듯? 프레임 크기 정해줘야 바운더리를 안넘어감..
-            .blur(radius: isHamburgerTapped ? 1.0 : 0)
+            .blur(radius: isAddNewWishTapped || isHamburgerTapped ? 1.0 : 0)
             
-            
+            //안됨
+//            if(isAddNewWishTapped || isHamburgerTapped == true){
+//                Text("")
+//                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+//                    .background(.ultraThinMaterial)
+//            }
             
             if isHamburgerTapped == true {
-                //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-visual-effect-blurs
-                //https://developer.apple.com/documentation/swiftui/view/blur(radius:opaque:)
                 
+                //여기 지금 Zstack위임
+                //새로운 뷰 파일 만들도록 해요...
+
+            }
+            
+            if isAddNewWishTapped == true {
                 
-                RoundedRectangle(cornerRadius: 20)
-                    .opacity(0.5)
-                    .blur(radius: 1)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        withAnimation(.spring().speed(1)){
-                            isHamburgerTapped.toggle()
-                        }
-                    }
+                //여기 지금 Zstack위임
+                //AddNewWish
+                AddNewWish_View(isAddNewWishTapped: $isAddNewWishTapped)
                 
-                //Start of profile and settings
-                HStack(){
-                    VStack(){
-                        //https://iamcho2.github.io/2020/11/19/swiftui-round-specific-coners
-                        Rectangle()
-                            .cornerRadius(40, corners: .bottomLeft)
-                            .cornerRadius(40, corners: .topRight)
-                            .frame(width:250, height: 150)
-                        
-                    }
-                    Spacer().frame(width:40.5)
-                    
-                }
-                //https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-asymmetric-transitions
-                .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
-                .ignoresSafeArea()
-                //End of profile and settings
             }
         }
         //.frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
