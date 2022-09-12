@@ -53,8 +53,10 @@ struct Wish_List_View: View {
                         .resizable()
                         .frame(width: 40, height: 40)
                         .onTapGesture {
-                            withAnimation(.spring().speed(0.5)){
-                                isHamburgerTapped = true
+                            //천천히 흐리게 하기
+                            //https://medium.com/devtechie/opacity-animation-in-swiftui-d7c38e3cc494
+                            withAnimation(.spring().speed(1)){
+                                isHamburgerTapped.toggle()
                             }
                         }
                     
@@ -156,8 +158,17 @@ struct Wish_List_View: View {
                         .blur(radius: 1)
                         .ignoresSafeArea()
                         .onTapGesture {
-                            isHamburgerTapped = false
+                            withAnimation(.spring().speed(1)){
+                                isHamburgerTapped.toggle()
+                            }
                         }
+                    
+                    //Start of profile and settings
+                    VStack(){
+                        
+                    }
+                    //End of profile and settings
+                    
                 }
                 
                     
