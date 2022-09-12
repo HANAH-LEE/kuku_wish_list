@@ -20,7 +20,8 @@ struct Hashtag_View: View {
                     .foregroundColor(Color.lightpink)
                     .frame(width: 24, height: 24)
                 Spacer().frame(width: 5)
-                Text("work").fontWeight(.thin)
+                Text("work")
+                    .fontWeight(.thin)
                 Spacer().frame(width: 10)
 
             }.frame(height: 36)
