@@ -45,7 +45,7 @@ struct Wish_List_View: View {
                     Image("icon_search")
                         .resizable()
                         .frame(width: 40, height: 40)
-                        
+                    
                     
                     Spacer().frame(width:16)
                     
@@ -80,7 +80,7 @@ struct Wish_List_View: View {
                     
                     Text("Get Started by clicking add new wish!")
                         .font(.custom("Montserrat-Medium", size:16))
-                        
+                    
                     
                     Spacer()
                     
@@ -93,7 +93,7 @@ struct Wish_List_View: View {
                             //Start of hashtags
                             HStack(spacing: 8){
                                 Spacer().frame(width: 21)
-                
+                                
                                 Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku1", _hashColor: "ff8882", _isSelected: false))
                                 Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku2", _hashColor: "ff8811", _isSelected: false))
                                 Hashtag_View(HashModelVar: HashModel(_hashStr: "kuku3", _hashColor: "f28882", _isSelected: false))
@@ -151,27 +151,23 @@ struct Wish_List_View: View {
             if isHamburgerTapped == true {
                 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-visual-effect-blurs
                 //https://developer.apple.com/documentation/swiftui/view/blur(radius:opaque:)
-                withAnimation(.easeInOut(duration: 2)){
-                    
-                    RoundedRectangle(cornerRadius: 20)
-                        .opacity(0.5)
-                        .blur(radius: 1)
-                        .ignoresSafeArea()
-                        .onTapGesture {
-                            withAnimation(.spring().speed(1)){
-                                isHamburgerTapped.toggle()
-                            }
+                
+                
+                RoundedRectangle(cornerRadius: 20)
+                    .opacity(0.5)
+                    .blur(radius: 1)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        withAnimation(.spring().speed(1)){
+                            isHamburgerTapped.toggle()
                         }
-                    
-                    //Start of profile and settings
-                    VStack(){
-                        
                     }
-                    //End of profile and settings
+                
+                //Start of profile and settings
+                VStack(){
                     
                 }
-                
-                    
+                //End of profile and settings
             }
         }
         //.frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
