@@ -64,6 +64,7 @@
 		AA1537A628CE13C000EF51E5 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA15377228CE13BF00EF51E5 /* Montserrat-ThinItalic.ttf */; };
 		AA1537A728CE13C000EF51E5 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA15377228CE13BF00EF51E5 /* Montserrat-ThinItalic.ttf */; };
 		AA1537A828CE13C000EF51E5 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA15377228CE13BF00EF51E5 /* Montserrat-ThinItalic.ttf */; };
+		AA69A50828D073BC001A0F3D /* CustomWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA69A50728D073BC001A0F3D /* CustomWheelPicker.swift */; };
 		AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */; };
 		AA896EC828CC8680004C7068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA896EC728CC8680004C7068 /* Assets.xcassets */; };
 		AA896ECB28CC8680004C7068 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA896ECA28CC8680004C7068 /* Preview Assets.xcassets */; };
@@ -117,6 +118,7 @@
 		AA15377028CE13BF00EF51E5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		AA15377128CE13BF00EF51E5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		AA15377228CE13BF00EF51E5 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AA69A50728D073BC001A0F3D /* CustomWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWheelPicker.swift; sourceTree = "<group>"; };
 		AA896EC028CC8680004C7068 /* kuku_wish_list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kuku_wish_list.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA896EC328CC8680004C7068 /* kuku_wish_listApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kuku_wish_listApp.swift; sourceTree = "<group>"; };
 		AA896EC728CC8680004C7068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				AA9C1DEB28CF173A0018CA08 /* AddNewWish.swift */,
 				AA896EC728CC8680004C7068 /* Assets.xcassets */,
 				AA896EC928CC8680004C7068 /* Preview Content */,
+				AA69A50728D073BC001A0F3D /* CustomWheelPicker.swift */,
 			);
 			path = kuku_wish_list;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				AABC4E7828CCFCC700E38EAC /* WishModel.swift in Sources */,
 				AABC4E7028CCE38D00E38EAC /* Wish.swift in Sources */,
 				AA9C1DEC28CF173A0018CA08 /* AddNewWish.swift in Sources */,
+				AA69A50828D073BC001A0F3D /* CustomWheelPicker.swift in Sources */,
 				AA896EC428CC8680004C7068 /* kuku_wish_listApp.swift in Sources */,
 				AA9C1DEA28CF07120018CA08 /* ViewExtensions.swift in Sources */,
 				AABC4E7228CCE43500E38EAC /* Hashtag.swift in Sources */,
