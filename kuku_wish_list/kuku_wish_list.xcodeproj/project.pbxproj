@@ -191,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				AA896EC228CC8680004C7068 /* kuku_wish_list */,
-				AA896ED328CC8680004C7068 /* kuku_wish_listTests */,
 				AA896EDD28CC8681004C7068 /* kuku_wish_listUITests */,
 				AA896EC128CC8680004C7068 /* Products */,
 			);
@@ -222,9 +221,10 @@
 				48663A5528CD0B55001EC0F2 /* ColorExtentsion.swift */,
 				AA9C1DE928CF07120018CA08 /* ViewExtensions.swift */,
 				AA9C1DEB28CF173A0018CA08 /* AddNewWish.swift */,
+				AA69A50728D073BC001A0F3D /* CustomWheelPicker.swift */,
+				AA896ED328CC8680004C7068 /* kuku_wish_listTests */,
 				AA896EC728CC8680004C7068 /* Assets.xcassets */,
 				AA896EC928CC8680004C7068 /* Preview Content */,
-				AA69A50728D073BC001A0F3D /* CustomWheelPicker.swift */,
 			);
 			path = kuku_wish_list;
 			sourceTree = "<group>";
