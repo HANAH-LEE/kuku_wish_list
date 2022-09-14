@@ -101,20 +101,16 @@ struct CustomPicker: UIViewRepresentable{
             label.text = pickerData[component][row]
             label.textColor = .black
             label.textAlignment = .center
-            //label.clipsToBounds = false
             //라벨이 ... 로 나오는 것 해제
             //https://stackoverflow.com/questions/36176356/uilabel-subclass-text-cut-off-in-bottom-despite-label-being-correct-height
             label.lineBreakMode = .byCharWrapping
+            //label.sizeToFit()
             
             //라벨 폰트를 자동으로 조정
             //https://stackoverflow.com/questions/3476646/uilabel-text-margin
             label.adjustsFontSizeToFitWidth = true
             
             label.font = UIFont(name: "Montserrat-Medium", size: 20)
-            
-            //view.backgroundColor = .red
-            //view.clipsToBounds = true
-            //view.layer.cornerRadius = view.bounds.height/2
             
             view.addSubview(label)
             
@@ -132,7 +128,6 @@ struct CustomPicker: UIViewRepresentable{
             //https://developer.apple.com/forums/thread/659184
             pickerView.subviews[0].subviews[0].subviews[2].layer.cornerRadius = view.bounds.height/2
             pickerView.subviews[0].subviews[0].subviews[2].backgroundColor = pickerView.tintColor;
-            //pickerView.subviews[0].subviews[0].subviews[2].alpha = 0.6
             
             //틴트컬러 색 바꾸기
             //https://stackoverflow.com/questions/48451642/how-to-change-the-uipickerview-text-color
@@ -150,11 +145,11 @@ struct CustomPicker: UIViewRepresentable{
             //            return component == 0 ? (2 / 3.0) * w : (1 / 3.0) * w
             switch (component){
             case 0:
-                return pickerView.frame.size.width / 2.5;
+                return pickerView.frame.size.width / 3;
             case 1:
-                return pickerView.frame.size.width / 5;
+                return pickerView.frame.size.width / 4;
             case 2:
-                return pickerView.frame.size.width / 5;
+                return pickerView.frame.size.width / 4;
                 
             default:
                 return 100;
