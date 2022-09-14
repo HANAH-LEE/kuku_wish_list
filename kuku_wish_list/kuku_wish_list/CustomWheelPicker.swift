@@ -24,9 +24,11 @@ struct CustomPickerView: View{
                 HStack(){
                     Spacer().frame(width: 30)
                     Text("select a date")
+                        .foregroundColor(Color.black)
                         .font(.custom("Montserrat-Medium", size: 20))
                     Spacer()
                     Text("save")
+                        .foregroundColor(Color.black)
                         .font(.custom("Montserrat-Medium", size: 20))
                     Spacer().frame(width: 30)
                 }
