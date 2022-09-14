@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 //https://www.youtube.com/watch?v=uPFk2BuNT5M
 //https://codewithchris.com/uipickerview-example/
 //https://makeapppie.com/2016/12/12/data-entry-with-uipickerview/
@@ -100,6 +101,15 @@ struct CustomPicker: UIViewRepresentable{
             label.text = pickerData[component][row]
             label.textColor = .black
             label.textAlignment = .center
+            //label.clipsToBounds = false
+            //라벨이 ... 로 나오는 것 해제
+            //https://stackoverflow.com/questions/36176356/uilabel-subclass-text-cut-off-in-bottom-despite-label-being-correct-height
+            label.lineBreakMode = .byCharWrapping
+            
+            //라벨 폰트를 자동으로 조정
+            //https://stackoverflow.com/questions/3476646/uilabel-text-margin
+            label.adjustsFontSizeToFitWidth = true
+            
             label.font = UIFont(name: "Montserrat-Medium", size: 20)
             
             //view.backgroundColor = .red
@@ -110,7 +120,8 @@ struct CustomPicker: UIViewRepresentable{
             
             //https://stackoverflow.com/questions/69227904/can-you-get-rid-of-opaque-rectangle-in-a-uipickerview
             pickerView.subviews[1].alpha = 1
-            pickerView.subviews[1].clipsToBounds = true
+            //pickerView.subviews[1].clipsToBounds = true
+            //pickerView.subviews[0].subviews.first?.subviews.last?.clipsToBounds = false
             
             //뒷 배경 투명하게 바꾸기
             //https://developer.apple.com/forums/thread/659184
@@ -133,8 +144,21 @@ struct CustomPicker: UIViewRepresentable{
         }
         
         func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat{
-//            return CGFloat(pickerData[component].count)
-            return 100
+            //column마다 다르게 width 정하기
+            //https://stackoverflow.com/questions/4338164/how-can-i-change-the-width-of-each-component-in-a-uipickerview
+            //            let w = pickerView.frame.size.width
+            //            return component == 0 ? (2 / 3.0) * w : (1 / 3.0) * w
+            switch (component){
+            case 0:
+                return pickerView.frame.size.width / 2.5;
+            case 1:
+                return pickerView.frame.size.width / 5;
+            case 2:
+                return pickerView.frame.size.width / 5;
+                
+            default:
+                return 100;
+            }
         }
         
         func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
