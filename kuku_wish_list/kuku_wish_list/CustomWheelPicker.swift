@@ -9,21 +9,25 @@ import Foundation
 import SwiftUI
 
 //https://www.youtube.com/watch?v=uPFk2BuNT5M
+//https://codewithchris.com/uipickerview-example/
+//https://makeapppie.com/2016/12/12/data-entry-with-uipickerview/
 
 struct CustomPickerView: View{
+    
     @State var selected = "Monday"
+    
     var body: some View{
         ZStack{
             Color.lightgray.frame(width: UIScreen.main.bounds.width, height: 300)
             VStack(){
                 HStack(){
-                    Spacer().frame(width: 50)
+                    Spacer().frame(width: 30)
                     Text("select a date")
-                        .font(.custom("Montserrat-Medium", size: 25))
+                        .font(.custom("Montserrat-Medium", size: 20))
                     Spacer()
                     Text("save")
-                        .font(.custom("Montserrat-Medium", size: 25))
-                    Spacer().frame(width: 50)
+                        .font(.custom("Montserrat-Medium", size: 20))
+                    Spacer().frame(width: 30)
                 }
                 CustomPicker(selected: $selected)
             }
@@ -69,55 +73,85 @@ struct CustomPicker: UIViewRepresentable{
             parent = parent1
         }
         
-        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-            return data.count
-        }
         
         func numberOfComponents(in pickerView: UIPickerView) -> Int {
             return 3
         }
         
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+            return pickerData[component].count
+        }
         //        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
         //
         //            return data[row]
         //        }
+        
+        //루프로 만들
+        //https://stackoverflow.com/questions/26063039/uipickerview-loop-the-data
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return pickerData[component][row % pickerData[component].count]
+        }
         
         func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView{
             let view = UIView(frame: CGRect(x:0 , y:0 , width: UIScreen.main.bounds.width/4, height: 60))
             
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
             
-            label.text = data[row]
-            label.textColor = .white
+            label.text = pickerData[component][row]
+            label.textColor = .black
             label.textAlignment = .center
-            label.font = .systemFont(ofSize: 25, weight: .bold)
+            label.font = UIFont(name: "Montserrat-Medium", size: 20)
             
-            view.backgroundColor = .red
-            
-            view.clipsToBounds = true
-            view.layer.cornerRadius = view.bounds.height/2
+            //view.backgroundColor = .red
+            //view.clipsToBounds = true
+            //view.layer.cornerRadius = view.bounds.height/2
             
             view.addSubview(label)
+            
+            //https://stackoverflow.com/questions/69227904/can-you-get-rid-of-opaque-rectangle-in-a-uipickerview
+            pickerView.subviews[1].alpha = 1
+            pickerView.subviews[1].clipsToBounds = true
+            
+            //뒷 배경 투명하게 바꾸기
+            //https://developer.apple.com/forums/thread/659184
+            let transparent = UIColor(red: 255.0 , green: 255.0, blue: 255.0, alpha: 0.0)
+            pickerView.subviews[1].backgroundColor = transparent
+            
+            //가운데 줄 색깔 바꾸기
+            //https://developer.apple.com/forums/thread/659184
+            pickerView.subviews[0].subviews[0].subviews[2].layer.cornerRadius = view.bounds.height/2
+            pickerView.subviews[0].subviews[0].subviews[2].backgroundColor = pickerView.tintColor;
+            //pickerView.subviews[0].subviews[0].subviews[2].alpha = 0.6
+            
+            //틴트컬러 색 바꾸기
+            //https://stackoverflow.com/questions/48451642/how-to-change-the-uipickerview-text-color
+            pickerView.setValue(UIColor.white, forKeyPath: "tintColor")
+            //pickerView.subviews[1].backgroundColor = .white
+            //pickerView.subviews.first?.subviews.last?.backgroundColor = UIColor.red
+            
             return view
         }
         
         func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat{
-            return UIScreen.main.bounds.width/4
+//            return CGFloat(pickerData[component].count)
+            return 100
         }
         
         func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
             return 60
         }
         
-        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            self.parent.selected = data[row]
-        }
+        //        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //            self.parent.selected = day[row]
+        //        }
         
     }
 }
 
-var data = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+var day = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
+var year = ["2021", "2022", "2023", "2024", "2025", "2026", "2027","2028", "2029", "2030"]
+var pickerData = [month, day, year]
 
 struct CustomPickerPreviews: PreviewProvider {
     static var previews: some View {
@@ -126,3 +160,4 @@ struct CustomPickerPreviews: PreviewProvider {
         }
     }
 }
+
