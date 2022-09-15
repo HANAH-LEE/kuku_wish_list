@@ -12,6 +12,7 @@ struct AddNewWish_View: View {
     
     //https://www.createwithswift.com/tutorial-passing-data-between-views-in-swiftui-using-state-and-binding/
     @Binding var isAddNewWishTapped : Bool
+    @State var isStartSelectDateTapped = false
     @State var selected = "Monday"
     var body: some View {
         
@@ -59,12 +60,19 @@ struct AddNewWish_View: View {
                                     Text("select date   ")
                                         .foregroundColor(Color.black)
                                         .font(.custom("Montserrat-Light", size: 19))
+                                        .onTapGesture {
+                                            withAnimation(.spring().speed(1)){
+                                                isStartSelectDateTapped.toggle()
+                                            }
+                                        }
                                     Image("1137")
                                 }
                             }
                             Spacer().frame(width:20)
                         }
-                        CustomPickerView(selected: selected)
+                        if isStartSelectDateTapped == true{
+                            CustomPickerView(selected: selected, isStartSelectDateTapped: $isStartSelectDateTapped)
+                        }
                         Spacer().frame(height: 35)
                     }
                     .frame(width: UIScreen.main.bounds.width)

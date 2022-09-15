@@ -16,6 +16,7 @@ import SwiftUI
 struct CustomPickerView: View{
     
     @State var selected = "Monday"
+    @Binding var isStartSelectDateTapped : Bool
     
     var body: some View{
         ZStack{
@@ -35,6 +36,7 @@ struct CustomPickerView: View{
                 CustomPicker(selected: $selected)
             }
         }
+        .transition(.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .top)))
     }
 }
 
@@ -177,7 +179,7 @@ var pickerData = [month, day, year]
 struct CustomPickerPreviews: PreviewProvider {
     static var previews: some View {
         Group {
-            CustomPickerView()
+            CustomPickerView( isStartSelectDateTapped: .constant(true))
         }
     }
 }
